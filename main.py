@@ -8,6 +8,7 @@ from selenium.common.exceptions import (WebDriverException,
                                         NoSuchWindowException)
 from chromedriver_py import binary_path
 import time
+import pyperclip
 
 ROOT_FOLDER = Path(__file__).parent
 service = Service(executable_path=binary_path)
@@ -18,12 +19,13 @@ browser.get("https://web.whatsapp.com/")
 
 time.sleep(20)
 
+message = """Essa mensagem foi enviado por um robô 🤖 automatizado com
+selenium, para mais detalhes acesse:
+https://github.com/LevideAlmeida/Bot_Whatsapp ❗❗❗"""
+
 while True:
     cells = []
     title = ""
-    message = "Essa mensagem foi enviado por um bot automatizado com \
-selenium, para mais detalhes acesse: \
-https://github.com/LevideAlmeida/Bot_Whatsapp"
 
     try:
         windows = browser.window_handles
@@ -39,9 +41,10 @@ https://github.com/LevideAlmeida/Bot_Whatsapp"
 
     try:
         for cell in cells:
+            pyperclip.copy(message)
             cell.click()
             input_box = browser.find_element(By.CLASS_NAME, "_3Uu1_")
-            input_box.send_keys(message)
+            input_box.send_keys(Keys.CONTROL + "v")
             input_box.send_keys(Keys.ENTER)
             time.sleep(10)
     except NoSuchWindowException:
