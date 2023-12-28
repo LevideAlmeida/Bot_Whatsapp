@@ -3,8 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
-from selenium.common.exceptions import (WebDriverException,
-                                        NoSuchElementException,
+from selenium.common.exceptions import (NoSuchElementException,
                                         NoSuchWindowException)
 from chromedriver_py import binary_path
 import time
@@ -26,11 +25,6 @@ https://github.com/LevideAlmeida/Bot_Whatsapp ❗❗❗"""
 while True:
     cells = []
     title = ""
-
-    try:
-        windows = browser.window_handles
-    except WebDriverException:
-        break
 
     try:
         cells = browser.find_elements(By.CLASS_NAME, "_2H6nH")
