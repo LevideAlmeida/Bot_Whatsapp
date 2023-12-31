@@ -2,3 +2,6 @@ venv
 .vscode
 Tests
 drivers
+Images
+imgs.qrc
+interface.ui
