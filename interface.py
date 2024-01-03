@@ -55,27 +55,26 @@ class Ui_MainWindow(object):
         self.label_3 = QLabel(self.centralwidget)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(-10, -10, 281, 361))
-        self.label_3.setStyleSheet(u"z-index: 2;")
         self.label_3.setLineWidth(-1)
         self.label_3.setIndent(-1)
         self.label_4 = QLabel(self.centralwidget)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(30, 40, 51, 51))
         self.label_4.setStyleSheet(u"background-color: rgba(0, 0, 0, 0);")
-        self.pushButton_4 = QPushButton(self.centralwidget)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setGeometry(QRect(60, 140, 155, 70))
-        self.pushButton_4.setMinimumSize(QSize(155, 70))
-        self.pushButton_4.setMaximumSize(QSize(146, 16777215))
-        self.pushButton_4.setStyleSheet(u"background-color: rgb(32, 74, 135);\n"
+        self.startButton = QPushButton(self.centralwidget)
+        self.startButton.setObjectName(u"startButton")
+        self.startButton.setGeometry(QRect(60, 140, 155, 70))
+        self.startButton.setMinimumSize(QSize(155, 70))
+        self.startButton.setMaximumSize(QSize(146, 16777215))
+        self.startButton.setStyleSheet(u"background-color: rgb(32, 74, 135);\n"
 "color: white;\n"
 "border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));")
-        self.pushButton_5 = QPushButton(self.centralwidget)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setGeometry(QRect(60, 235, 155, 70))
-        self.pushButton_5.setMinimumSize(QSize(155, 70))
-        self.pushButton_5.setMaximumSize(QSize(146, 16777215))
-        self.pushButton_5.setStyleSheet(u"background-color: rgb(32, 74, 135);\n"
+        self.exitButton = QPushButton(self.centralwidget)
+        self.exitButton.setObjectName(u"exitButton")
+        self.exitButton.setGeometry(QRect(60, 235, 155, 70))
+        self.exitButton.setMinimumSize(QSize(155, 70))
+        self.exitButton.setMaximumSize(QSize(146, 16777215))
+        self.exitButton.setStyleSheet(u"background-color: rgb(32, 74, 135);\n"
 "color: white;\n"
 "border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -83,8 +82,8 @@ class Ui_MainWindow(object):
         self.label.raise_()
         self.label_2.raise_()
         self.label_4.raise_()
-        self.pushButton_4.raise_()
-        self.pushButton_5.raise_()
+        self.startButton.raise_()
+        self.exitButton.raise_()
 
         self.retranslateUi(MainWindow)
 
@@ -97,7 +96,7 @@ class Ui_MainWindow(object):
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Zap", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/imagens/Images/bg_image.jpg\"/></p></body></html>", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/imagens/Images/logo_image.png\"/></p></body></html>", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Start bot", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
+        self.startButton.setText(QCoreApplication.translate("MainWindow", u"Start bot", None))
+        self.exitButton.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
     # retranslateUi
 
