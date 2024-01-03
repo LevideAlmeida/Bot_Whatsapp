@@ -5,3 +5,4 @@ drivers
 Images
 imgs.qrc
 interface.ui
+__pycache__
